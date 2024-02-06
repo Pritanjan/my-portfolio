@@ -5,9 +5,13 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "React Commerce",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Weather App",
+    img: "https://wallpaperaccess.com/full/2049229.jpg",
+    // img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+
+    // HTML, CSS, and JavaScript are utilized to create web applications that provide real-time weather information for designated locations. These applications enable users to access current weather conditions, forecasts, and additional details including temperature, humidity, wind speed, and precipitation. They commonly integrate external APIs to fetch and display accurate weather data, offering users a convenient method to stay updated about weather conditions in their local area or any desired location worldwide.
+
+    desc: "The Weather App applications enable users to access current weather conditions, forecasts, and additional details including temperature, humidity, wind speed, and precipitation by using an APIs.",
   },
   {
     id: 2,
@@ -27,6 +31,12 @@ const items = [
     img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
   },
+  // {
+  //   id: 5,
+  //   title: "Weather App",
+  //   img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+  //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+  // },
 ];
 
 const Single = ({ item }) => {
@@ -39,13 +49,13 @@ const Single = ({ item }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
-    <section >
+    <section>
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
             <img src={item.img} alt="" />
           </div>
-          <motion.div className="textContainer" style={{y}}>
+          <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <button>See Demo</button>
